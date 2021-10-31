@@ -1,4 +1,4 @@
-# The rss feed for the yoututbe channel to convert to podcast.
+# The rss feed for the youtube channel to convert to podcast.
 # Format should be something like https://www.youtube.com/feeds/videos.xml?channel_id=<channel_id>"
 # You can get the <channel_id> from the channel's page on youtube.
 YOUTUBE_RSS = ""
