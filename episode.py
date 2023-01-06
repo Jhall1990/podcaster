@@ -274,4 +274,3 @@ class DownloadThread(threading.Thread):
         except Exception as e:
             self.error = e
         self.done = True
-

@@ -104,4 +104,3 @@ class PodcastCreator(object):
 
         with open(config.XML_LOCATION, "w") as xml_file:
             xml_file.write(xml)
-
