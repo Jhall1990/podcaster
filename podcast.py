@@ -33,9 +33,9 @@ ts/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itune
     </itunes:owner>
 	<itunes:block>No</itunes:block>
 	<itunes:explicit>no</itunes:explicit>
-    <itunes:image href="https://djrpnl90t7dii.cloudfront.net/podbean-logo/podbean_54.jpg"/>
+    <itunes:image href="https://upload.wikimedia.org/wikipedia/en/d/d3/Critical_Role_logo%2C_from_social_media_2020.jpg"/>
     <image>
-        <url>https://djrpnl90t7dii.cloudfront.net/podbean-logo/podbean_54.jpg</url>
+        <url>https://upload.wikimedia.org/wikipedia/en/d/d3/Critical_Role_logo%2C_from_social_media_2020.jpg</url>
         <title>{title}</title>
         <link>{url}</link>
         <width>144</width>
@@ -63,7 +63,7 @@ def get_episodes_in_rss():
     """
     if os.path.exists(config.XML_LOCATION):
         feed = feedparser.parse(config.XML_LOCATION)
-        episodes = [episode.Episode(i.summary, "", "") for i in feed.entries]
+        episodes = [episode.Episode(i.summary, i.title.split("-")[0].strip(), "") for i in feed.entries]
         print("\n".join(["{} already in podcast...".format(i.title) for i in episodes]))
         return episodes
     else:
