@@ -1,4 +1,5 @@
-feedparser
-podgen
-pytube
 ffmpeg
+pytube
+requests
+feedparser
+mutagen
