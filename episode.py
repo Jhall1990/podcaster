@@ -1,7 +1,5 @@
 import os
 import re
-import sys
-import pydub
 import config
 import ffmpeg
 import pytube
