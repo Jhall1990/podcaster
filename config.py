@@ -28,3 +28,10 @@ PODCAST_INFO = {
         "category": "DND",
         "email": "jacobhall90@gmail.com"
     }
+
+# Whether or not to use sponsor block to remove ads from the audio.
+SKIP_ADS = False
+
+# The categories of ads to remove.
+# TODO: Need to figure out what's supported here.
+SPONSOR_BLOCK_CATEGORIES = []

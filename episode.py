@@ -49,7 +49,9 @@ def download_episodes(episodes):
     # Rename each downloaded file.
     for episode in episodes:
         episode.rename()
-        episode.remove_sponsors()
+
+        if config.SKIP_ADS:
+            episode.remove_sponsors()
 
 class Episode(object):
     """
@@ -184,6 +186,7 @@ class Episode(object):
         Make a get request tohttps://sponsor.ajay.app/api/skipSegments/<first_4_of_sum> 
         for all sponsor block info for the video.
         """
+        # TODO: Figure out how to include json with the categories to skip
         id_hash = self.yt_id_hash()
         sponsor_info_list = requests.get("https://sponsor.ajay.app/api/skipSegments/{}".format(id_hash)).json()
 
